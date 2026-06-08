@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Daily Summary • 2026-06-07</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .title-font { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    .section-header { position: relative; }
+    .section-header:after { content: ''; position: absolute; bottom: -4px; left: 0; width: 36px; height: 3px; background: linear-gradient(to right, #3b82f6, transparent); border-radius: 999px; }
+    .item-card { transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1); }
+    .item-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+    .badge { font-size: 0.68rem; font-weight: 600; padding: 2px 10px; border-radius: 9999px; letter-spacing: -.2px; }
+    .summary-text { line-height: 1.5; }
+    .nav { font-size: 0.875rem; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200">
+  <div class="max-w-[1080px] mx-auto px-6 py-8">
+    
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h1 class="title-font text-5xl font-semibold tracking-tighter">AI Daily Summary</h1>
+        <div class="text-zinc-400 mt-1 text-xl">2026-06-07</div>
+      </div>
+      <div class="text-right">
+        <a href="index.html" class="nav px-4 py-2 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-2xl text-sm inline-flex items-center gap-2">← 返回主页 / 日期选择</a>
+      </div>
+    </div>
+
+    <!-- 今日总结 -->
+    <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-7 mb-8">
+      <div class="uppercase tracking-[1.5px] text-xs text-zinc-500 font-medium mb-2">今日总结</div>
+      <p class="text-[15.5px] text-zinc-300 leading-relaxed">今天 AI 焦点在个人/企业 Agent 工具落地与开源框架更新。Microsoft 推出 always-on 个人 Agent Scout，GitHub Copilot SDK 正式可用并新增 Agent 任务 API；开源 Agent 项目持续高 star（AutoGPT、Langflow 等）；本地运行 AI 工具和计算网络叙事开始升温。整体高质量内容以实用框架和官方工具为主。</p>
+    </div>
+
+    <!-- 统计 -->
+    <div class="flex flex-wrap gap-3 mb-8 text-sm">
+      <div class="px-4 py-1.5 bg-zinc-900 border border-zinc-700 rounded-2xl">共收录 <span class="font-semibold text-white">18</span> 条高质量内容</div>
+      <div class="px-3.5 py-1.5 bg-zinc-900 border border-zinc-700 rounded-2xl">官方更新 3</div>
+      <div class="px-3.5 py-1.5 bg-zinc-900 border border-zinc-700 rounded-2xl">AI Agent 5</div>
+      <div class="px-3.5 py-1.5 bg-zinc-900 border border-zinc-700 rounded-2xl">开源项目 6</div>
+      <div class="px-3.5 py-1.5 bg-zinc-900 border border-zinc-700 rounded-2xl">实用 Skill 4</div>
+    </div>
+
+    <!-- 分类区块 -->
+
+    <!-- 1. 官方与重要更新 -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">官方与重要更新 <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">TOP 3</span></h2>
+      </div>
+      <div class="category-grid">
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-blue-500/15 text-blue-400">Microsoft</span>
+          </div>
+          <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">Microsoft Scout：始终在线的个人 Agent</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">Microsoft 正式推出 Microsoft Scout，基于 Microsoft 365 的企业级 always-on 个人 Agent。支持身份、凭证和访问控制，集成 OpenClaw 开源技术，强调企业安全与合规。</p>
+          <div class="mt-4">
+            <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-purple-500/15 text-purple-400">GitHub</span>
+          </div>
+          <a href="https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">GitHub Copilot SDK 正式发布 + Agent 任务 API</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">GitHub Copilot SDK 正式可用，开发者可将 Copilot 的 agentic engine 嵌入自己的应用。同期推出 Agent tasks REST API（Copilot Pro/Pro+/Max 可用），支持编程化启动和跟踪云端 Agent 任务。</p>
+          <div class="mt-4">
+            <a href="https://github.blog/changelog/2026-06-02-copilot-sdk-is-now-generally-available/" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. AI 模型与前沿研究 (limited today) -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">AI 模型与前沿研究 <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">精选较少</span></h2>
+      </div>
+      <div class="text-sm text-zinc-500">今日高质量模型/论文发布较少，重点关注实用 Agent 框架与计算基础设施。</div>
+    </div>
+
+    <!-- 3. AI Agent 与框架 -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">AI Agent 与框架 <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">TOP 5</span></h2>
+      </div>
+      <div class="category-grid">
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-emerald-500/15 text-emerald-400">X</span>
+            <span class="badge bg-emerald-500/15 text-emerald-400">Agent</span>
+          </div>
+          <a href="https://x.com/hermesworldai/status/2063802527103987809" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">HermesWorld：AI Agent MMORPG 更新文档</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">HermesWorld 发布新版 Agent 接入文档，支持 Windows/Mac 客户端，Agent 可通过 OS 级自动化控制游戏客户端，观察屏幕并在训练场玩耍。</p>
+          <div class="mt-4">
+            <a href="https://x.com/hermesworldai/status/2063802527103987809" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-emerald-500/15 text-emerald-400">X</span>
+          </div>
+          <a href="https://x.com/MagpieLoans/status/2063809063876497561" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">magpie-x402：让 AI Agent 直接访问链上借贷协议</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">Solana 上的 permissionless 借贷协议推出 x402，让 AI Agent 无需 API key、账户或托管即可用 SOL 支付并查询信用/贷款数据。</p>
+          <div class="mt-4">
+            <a href="https://x.com/MagpieLoans/status/2063809063876497561" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-emerald-500/15 text-emerald-400">GitHub</span>
+          </div>
+          <a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">AutoGPT：184k+ stars，多 Agent 框架持续迭代</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">AutoGPT 作为最早的 AI 自主代理框架之一，持续高 star。提供工具让用户专注于重要事项，构建在自然语言编程之上。</p>
+          <div class="mt-4">
+            <a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 开源项目推荐 -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">开源项目推荐 <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">TOP 6</span></h2>
+      </div>
+      <div class="category-grid">
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-orange-500/15 text-orange-400">GitHub</span>
+          </div>
+          <a href="https://github.com/mani-skill" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">ManiSkill 项目迁移至新组织 mani-skill</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">ManiSkill（机器人与具身 AI 模拟框架）从 UCSD lab org 迁移到独立 mani-skill GitHub 组织，便于长期维护和社区驱动开发。</p>
+          <div class="mt-4">
+            <a href="https://github.com/mani-skill" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-orange-500/15 text-orange-400">GitHub</span>
+          </div>
+          <a href="https://github.com/langflow-ai/langflow" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">Langflow：149k+ stars，强大的 Agent 与工作流构建工具</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">Langflow 是一个用于构建和部署 AI 驱动 Agent 与工作流的强大可视化工具，持续获得社区关注。</p>
+          <div class="mt-4">
+            <a href="https://github.com/langflow-ai/langflow" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-orange-500/15 text-orange-400">X</span>
+          </div>
+          <a href="#" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">PewDiePie 本地 AI 助手：57k+ GitHub stars，无订阅无云</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">PewDiePie 发布完全本地运行的 AI 助手，无需账号、无需订阅，纯本地计算，已获 57,000+ GitHub stars。</p>
+          <div class="mt-4">
+            <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 社区讨论精华 -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">社区讨论精华 <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">TOP 3</span></h2>
+      </div>
+      <div class="category-grid">
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-rose-500/15 text-rose-400">X</span>
+          </div>
+          <a href="https://x.com/JestersWar/status/2063800828561871118" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">教授完全依赖 AI 却批评学生用 AI 写论文</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">社区热议：教授批评学生“让 AI 替自己思考写论文”，却自己完全依赖 AI 来评判论文。引发对学术诚信与 AI 使用的广泛讨论。</p>
+          <div class="mt-4">
+            <a href="https://x.com/JestersWar/status/2063800828561871118" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. 实用 Skill / Workflows -->
+    <div class="mb-9">
+      <div class="section-header flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-semibold tracking-tight">实用 Skill / Workflows <span class="text-xs font-normal text-zinc-400 align-middle ml-1.5">TOP 4</span></h2>
+      </div>
+      <div class="category-grid">
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-amber-500/15 text-amber-400">Workflow</span>
+          </div>
+          <a href="#" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">终极数字工具包：20 个必备平台（Notion、Zapier 等）</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">社区分享的 20 个优化工作流、沟通和创作的必备工具，包括 Canva、Notion、Trello、Zapier、Grammarly 等，适合日常效率提升。</p>
+          <div class="mt-4">
+            <a href="#" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+
+        <div class="item-card bg-zinc-900 border border-zinc-700 rounded-3xl p-5">
+          <div class="flex items-center gap-2 mb-2.5">
+            <span class="badge bg-amber-500/15 text-amber-400">Skill</span>
+          </div>
+          <a href="https://github.com/linny006/agent-framework-radar" target="_blank" class="block font-semibold text-xl leading-tight hover:text-blue-400 transition">Agent Framework Radar：最新 Agent 框架实时索引</a>
+          <p class="summary-text text-sm text-zinc-400 mt-3">轻量级 GitHub 项目，按发布时间而非 star 数排序，持续发现并索引最新的开源 Agent 框架，适合跟踪前沿实用工具。</p>
+          <div class="mt-4">
+            <a href="https://github.com/linny006/agent-framework-radar" target="_blank" class="inline-flex items-center text-xs font-medium text-blue-400 hover:text-blue-300">查看原文 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-xs text-zinc-500 mt-10 text-center">
+      由 ai-daily-summary Skill 自动生成 · 严格热点/质量过滤 · 所有链接均为原文直达<br>
+      文件位置：/Users/bin/project/grok-project/ai-daily/ai-daily-2026-06-07.html
+    </div>
+  </div>
+</body>
+</html>

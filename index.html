@@ -6,7 +6,11 @@
   <title>AI Daily Summary</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .title-font { font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .title-font { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+    .nav-link { transition: color .1s; }
+    .nav-link:hover { color: #60a5fa; }
   </style>
 </head>
 <body class="bg-zinc-950 text-zinc-200">
@@ -24,12 +28,13 @@
         <label class="block text-xs text-zinc-500 mb-1.5">选择日期查看历史报告</label>
         <select id="date-select" onchange="if(this.value) window.location.href=this.value" 
                 class="w-full bg-zinc-900 border border-zinc-700 text-white px-4 py-2.5 rounded-2xl text-sm focus:outline-none focus:border-zinc-400">
-          <option value="">2025-06-07（今日）</option>
+          <option value="">2026-06-07（今日）</option>
+          <option value="ai-daily-2026-06-07.html">2026-06-07</option>
           <option value="ai-daily-2025-06-06.html">2025-06-06</option>
           <option value="ai-daily-2025-06-05.html">2025-06-05</option>
           <option value="ai-daily-2025-06-04.html">2025-06-04</option>
         </select>
-        <div class="mt-2 text-[10px] text-zinc-500">真实运行后会自动发现所有历史日期</div>
+        <div class="mt-2 text-[10px] text-zinc-500">真实运行后会自动通过 ls 发现所有历史日期</div>
       </div>
     </div>
 
@@ -41,7 +46,7 @@
       </div>
       <div class="lg:col-span-2 bg-zinc-900 border border-zinc-800 rounded-3xl p-6 flex items-center">
         <div class="grid grid-cols-3 gap-4 w-full text-center">
-          <div><div class="text-3xl font-semibold">47</div><div class="text-xs text-zinc-500">总条目</div></div>
+          <div><div class="text-3xl font-semibold">18</div><div class="text-xs text-zinc-500">总条目</div></div>
           <div><div class="text-3xl font-semibold">6</div><div class="text-xs text-zinc-500">分类覆盖</div></div>
           <div><div class="text-3xl font-semibold">4</div><div class="text-xs text-zinc-500">历史日期</div></div>
         </div>
@@ -52,55 +57,65 @@
     <div class="mb-8">
       <div class="text-xs text-zinc-500 mb-2">快速跳转历史日期</div>
       <div class="flex flex-wrap gap-2">
-        <a href="#" class="px-3 py-1 text-sm bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-xl">2025-06-07（今日）</a>
+        <a href="ai-daily-2026-06-07.html" class="px-3 py-1 text-sm bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-xl">2026-06-07（今日）</a>
         <a href="ai-daily-2025-06-06.html" class="px-3 py-1 text-sm bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-xl">2025-06-06</a>
         <a href="ai-daily-2025-06-05.html" class="px-3 py-1 text-sm bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-xl">2025-06-05</a>
         <a href="ai-daily-2025-06-04.html" class="px-3 py-1 text-sm bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 rounded-xl">2025-06-04</a>
       </div>
     </div>
 
-    <!-- 分类预览（简化演示） -->
+    <!-- 分类预览 -->
     <div class="space-y-8">
       <div>
         <div class="flex justify-between items-center mb-3">
-          <h2 class="text-xl font-semibold">官方与重要更新 <span class="text-xs text-zinc-400">TOP 8</span></h2>
-          <a href="#" class="text-xs text-blue-400 hover:underline">查看完整 →</a>
+          <h2 class="text-xl font-semibold">官方与重要更新 <span class="text-xs text-zinc-400">TOP 3</span></h2>
+          <a href="ai-daily-2026-06-07.html" class="text-xs text-blue-400 hover:underline">查看完整 →</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-sm">
-            <div class="text-violet-400 text-xs mb-1">OpenAI</div>
-            <div class="font-medium">o3 模型重大推理升级</div>
-            <div class="text-zinc-400 text-xs mt-1 line-clamp-2">复杂多步推理与 Agent 能力显著提升...</div>
-            <a href="#" target="_blank" class="mt-2 inline-block text-blue-400 text-xs">原文 →</a>
+            <div class="text-violet-400 text-xs mb-1">Microsoft</div>
+            <div class="font-medium">Microsoft Scout：始终在线的个人 Agent</div>
+            <div class="text-zinc-400 text-xs mt-1 line-clamp-2">基于 M365 的企业级 always-on 个人 Agent，支持 OpenClaw 开源技术...</div>
+            <a href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/06/02/introducing-microsoft-scout-your-always-on-personal-agent/" target="_blank" class="mt-2 inline-block text-xs text-blue-400">原文 →</a>
           </div>
         </div>
       </div>
 
       <div>
         <div class="flex justify-between items-center mb-3">
-          <h2 class="text-xl font-semibold">实用 Skill / Workflows <span class="text-xs text-zinc-400">TOP 10</span></h2>
-          <a href="#" class="text-xs text-blue-400 hover:underline">查看完整 →</a>
+          <h2 class="text-xl font-semibold">AI Agent 与框架 <span class="text-xs text-zinc-400">TOP 5</span></h2>
+          <a href="ai-daily-2026-06-07.html" class="text-xs text-blue-400 hover:underline">查看完整 →</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-sm">
+            <div class="text-emerald-400 text-xs mb-1">X + Agent</div>
+            <div class="font-medium">magpie-x402：AI Agent 直接访问链上借贷</div>
+            <div class="text-zinc-400 text-xs mt-1 line-clamp-2">Solana permissionless 借贷协议 x402，让 Agent 无需 key 即可用 SOL 查询数据...</div>
+            <a href="https://x.com/MagpieLoans/status/2063809063876497561" target="_blank" class="mt-2 inline-block text-xs text-blue-400">原文 →</a>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between items-center mb-3">
+          <h2 class="text-xl font-semibold">实用 Skill / Workflows <span class="text-xs text-zinc-400">TOP 4</span></h2>
+          <a href="ai-daily-2026-06-07.html" class="text-xs text-blue-400 hover:underline">查看完整 →</a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-4 text-sm">
             <div class="text-amber-400 text-xs mb-1">Skill</div>
-            <div class="font-medium">多模型智能路由 + 持久化记忆 Skill</div>
-            <div class="text-zinc-400 text-xs mt-1 line-clamp-2">支持 Grok/Claude/本地模型，适合生产 Agent...</div>
-            <a href="#" target="_blank" class="mt-2 inline-block text-blue-400 text-xs">原文 →</a>
+            <div class="font-medium">Agent Framework Radar：最新框架实时索引</div>
+            <div class="text-zinc-400 text-xs mt-1 line-clamp-2">按发布时间排序的轻量 GitHub Agent 框架 tracker，便于跟踪前沿实用工具。</div>
+            <a href="https://github.com/linny006/agent-framework-radar" target="_blank" class="mt-2 inline-block text-xs text-blue-400">原文 →</a>
           </div>
         </div>
       </div>
     </div>
 
     <div class="mt-12 text-center text-xs text-zinc-500">
-      由 ai-daily-summary Skill 生成 · 按日期归档 · 文件位于项目 /ai-daily 目录<br>
-      运行 <span class="font-mono">grok -p "今天AI总结" --yolo</span> 自动更新 index + 新 dated 报告（输出到 /Users/bin/project/grok-project/ai-daily）
+      由 ai-daily-summary Skill 自动生成 · 按日期归档 · 文件位于 /Users/bin/project/grok-project/ai-daily<br>
+      GitHub Pages: https://lurea-git.github.io/ai-daily/ （已配置）
     </div>
   </div>
-
-  <script>
-    // Demo only
-    console.log('%c[Demo] 日期下拉已就绪，真实运行时会通过 ls 动态填充历史日期', 'color:#666');
-  </script>
 </body>
 </html>
